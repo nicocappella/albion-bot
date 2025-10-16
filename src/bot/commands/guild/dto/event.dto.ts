@@ -1,15 +1,17 @@
 import { StringOption } from 'necord';
+import baseMaps from '@/../base.maps.json';
+
+const EVENT_LOCATION_CHOICES = baseMaps.map((m) => ({
+  name: m.name,
+  value: m.value,
+}));
 
 export class CrearEventoDto {
   @StringOption({
     name: 'lugar',
-    description: 'Lugar del evento',
+    description: 'Lugar del evento (seleccioná un mapa priorizado de la lista)',
     required: true,
-    choices: [
-      { name: 'Bridgewatch Portal', value: 'Bridgewatch Portal' },
-      { name: 'Arthur Rest', value: 'Arthur Rest' },
-      { name: 'HO Frontspring Volcano', value: 'HO Frontspring Volcano' },
-    ],
+    choices: EVENT_LOCATION_CHOICES,
   })
   lugar!: string;
 

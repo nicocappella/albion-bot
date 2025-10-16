@@ -11,6 +11,8 @@ pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
+albion.data.json
+black.maps.json
 
 # OS
 .DS_Store
